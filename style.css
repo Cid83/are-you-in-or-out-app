@@ -1,0 +1,133 @@
+
+  @@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap');
+   
+  *{
+    box-sizing: border-box;
+  }
+
+  body{
+    font-family: 'Comic Neue', cursive;
+    background: url(img/3.jpg)center no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+  }
+
+ 
+
+  .quiz-container{
+    color: #fffffffb;
+    width: 800px;
+    margin-top: 100px;
+    margin-bottom: 20rem;
+    gap: 20px;
+
+  }
+
+  .quiz-container h1{
+    color: #fffffffb;
+    font-weight: 400;
+    margin-top: 200px;
+    margin-left: 150px;
+    text-shadow: 1px 3px #fff;
+  }
+
+  .quiz-header{
+    padding: 20px;
+    margin: 20px;
+
+  }
+
+  h2{
+    padding: 0 1rem;
+  }
+
+  ul{
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li{
+    font-size: 1.2rem;
+    margin: 1rem 0;
+  }
+
+  ul li label{
+    cursor: pointer;
+  }
+
+  .submit{
+    border: none;
+    background-color: rgba(91, 190, 252,0.4);
+    color: #fffffffb;
+    border-radius: 10px;
+    width: 300px;
+    height: 25px;
+    margin-left: 30px;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding-bottom: 2rem;
+    cursor: pointer;
+  }
+
+  #submit:focus:after{
+    content: ",Last Decision";
+  }
+
+  #submit:focus{
+    background-color: lightseagreen;
+  }
+
+  [type="radio"]:checked,
+  [type="radio"]:not(:checked){
+    
+    display: none; 
+  }
+
+  [type="radio"]:checked + label,
+  [type="radio"]:not(:checked) + label{
+    position: relative;
+    padding-left: 20px;
+    cursor: pointer;
+  }
+
+  [type="radio"]:checked + label:before,
+  [type="radio"]:not(:checked) + label:before{
+    content:"";
+    position: absolute;
+    left:0;
+    top: 4px;
+    border: 1px solid #ddd;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+    
+  }
+
+  [type="radio"]:checked + label:after,
+  [type="radio"]:not(:checked) + label:after{
+    position: absolute;
+    top:7px;
+    bottom: 0;
+    left: 3px;
+    content: "";
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: lightseagreen;
+    border-radius: 100%;
+    transition: all .3s ease;
+  }
+
+  [type="radio"]:not(:checked) + label:after{
+    opacity: 0;
+  }
+
+  [type="radio"]:checked + label:after{
+    opacity: 1;
+  }
